@@ -1,38 +1,39 @@
 import React, { useEffect } from "react";
 import { View, Text, TouchableOpacity, Alert, StyleSheet } from "react-native";
 
-const HomeScreen = () => {
-  const handleLogin = () => {
-    Alert.alert("Login Button Pressed!");
-  };
-  const handleWebsite = () => {
-    Alert.alert("Website Button Pressed!");
-  };
-  const handleLandingPage = () => {
-    Alert.alert("Landing Page Button Pressed!");
+const HomeScreen = ({ navigation }) => {
+  const handleClick = element => {
+    switch (element) {
+      case "Login":
+        return navigation.navigate("Login");
+      case "New":
+        return navigation.navigate("New");
+    }
   };
 
   return (
-    <>
-      <View style={styles.mainContainer}>
-        <View style={styles.buttonBorder}>
-          <Text style={styles.clients}>Existing Clients</Text>
-          <TouchableOpacity onPress={handleLogin}>
-            <Text style={styles.button}>Login</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.buttonBorder}>
-          <Text style={styles.new}>Start Something New</Text>
-          <TouchableOpacity onPress={handleWebsite}>
-            <Text style={styles.button}>Website</Text>
-          </TouchableOpacity>
-          <View style={{ marginTop: 40 }} />
-          <TouchableOpacity onPress={handleLandingPage}>
-            <Text style={styles.button}>Landing Page</Text>
-          </TouchableOpacity>
-        </View>
+    <View style={styles.mainContainer}>
+      <View style={styles.btnBorder}>
+        <Text style={styles.btnHeading}>Existing Clients</Text>
+        <TouchableOpacity
+          onPress={() => {
+            handleClick("Login");
+          }}
+        >
+          <Text style={styles.btn}>Login</Text>
+        </TouchableOpacity>
       </View>
-    </>
+      <View style={styles.btnBorder}>
+        <Text style={styles.btnHeading}>Build a new Site</Text>
+        <TouchableOpacity
+          onPress={() => {
+            handleClick("New");
+          }}
+        >
+          <Text style={styles.btn}>Get Started</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 };
 
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%"
   },
-  button: {
+  btn: {
     backgroundColor: "transparent",
     borderBottomColor: "#C3073F",
     borderBottomWidth: 5,
@@ -56,8 +57,8 @@ const styles = StyleSheet.create({
     marginRight: "auto",
     textAlign: "center"
   },
-  buttonBorder: {
-    marginTop: 40,
+  btnBorder: {
+    marginTop: 50,
     borderStyle: "solid",
     borderColor: "#8C8C8C",
     borderWidth: 1,
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     marginRight: "auto",
     marginBottom: 25
   },
-  clients: {
+  btnHeading: {
     color: "#AFAFAF",
     fontWeight: "bold",
     textTransform: "uppercase",
@@ -79,20 +80,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#1A1A1D",
     letterSpacing: 3,
     width: "80%",
-    marginLeft: "auto",
-    marginRight: "auto"
-  },
-  new: {
-    color: "#AFAFAF",
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    position: "relative",
-    bottom: 23,
-    textAlign: "center",
-    fontSize: 16,
-    backgroundColor: "#1A1A1D",
-    letterSpacing: 3,
-    width: "95%",
     marginLeft: "auto",
     marginRight: "auto"
   }
