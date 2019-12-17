@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1005051219802-94fa833pn7mch3l0a60s1kfcqdotusbf.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://schaafdevapp.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1005051219802</string>
+    <string name="google_api_key" translatable="false">AIzaSyBOmyU5MfdpVj5utqAUpyWh9cJwL6gVkx4</string>
+    <string name="google_app_id" translatable="false">1:1005051219802:android:25034a4f3bdbbe15762d63</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBOmyU5MfdpVj5utqAUpyWh9cJwL6gVkx4</string>
+    <string name="google_storage_bucket" translatable="false">schaafdevapp.appspot.com</string>
+    <string name="project_id" translatable="false">schaafdevapp</string>
+</resources>

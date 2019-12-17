@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1005051219802",
+    "firebase_url": "https://schaafdevapp.firebaseio.com",
+    "project_id": "schaafdevapp",
+    "storage_bucket": "schaafdevapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005051219802:android:25034a4f3bdbbe15762d63",
+        "android_client_info": {
+          "package_name": "com.schaafapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005051219802-94fa833pn7mch3l0a60s1kfcqdotusbf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOmyU5MfdpVj5utqAUpyWh9cJwL6gVkx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005051219802-94fa833pn7mch3l0a60s1kfcqdotusbf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
